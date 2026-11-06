@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob: https://images.unsplash.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-src https://www.openstreetmap.org; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Insights &amp; Resources — Aldermoor Advisory (Demo)</title>
+<meta name="description" content="Practical articles on strategy, finance, operations and growth from the fictional Aldermoor Advisory, with searchable categories.">
+<link rel="canonical" href="https://consulting.virellionapex.com/insights.html">
+<meta name="theme-color" content="#1d3a32">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aldermoor Advisory (Demo by Virellion Apex)">
+<meta property="og:title" content="Insights &amp; Resources — Aldermoor Advisory (Demo)">
+<meta property="og:description" content="Practical articles on strategy, finance, operations and growth from the fictional Aldermoor Advisory, with searchable categories.">
+<meta property="og:url" content="https://consulting.virellionapex.com/insights.html">
+<meta property="og:image" content="https://consulting.virellionapex.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aldermoor Advisory — fictional consulting firm demonstration website by Virellion Apex">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insights &amp; Resources — Aldermoor Advisory (Demo)">
+<meta name="twitter:description" content="Practical articles on strategy, finance, operations and growth from the fictional Aldermoor Advisory, with searchable categories.">
+<meta name="twitter:image" content="https://consulting.virellionapex.com/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Aldermoor Advisory home"><img src="images/logo.png" alt="" width="42" height="42"><span class="brand-name">Aldermoor<small>Advisory</small></span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-rail"><span class="bars" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+</header>
+<aside class="rail" id="site-rail" aria-label="Site">
+  <a class="brand" href="index.html" aria-label="Aldermoor Advisory home"><img src="images/logo.png" alt="" width="42" height="42"><span class="brand-name">Aldermoor<small>Advisory</small></span></a>
+  <nav class="rail-nav" aria-label="Main"><ol><li><a href="index.html">Home</a></li><li><a href="about.html">The Firm</a></li><li><a href="services.html">Practice Areas</a></li><li><a href="team.html">People</a></li><li><a href="insights.html" aria-current="page">Insights</a></li><li><a href="appointments.html">Book a Consultation</a></li><li><a href="onboarding.html">New Client Inquiry</a></li><li><a href="contact.html">Contact</a></li></ol></nav>
+  <div class="rail-foot">
+    <a class="btn btn-primary btn-sm" href="appointments.html?type=intro">Free 30-min call</a>
+    <p class="rail-meta">Chicago · Remote across North America<br><a href="tel:+13125550148">(312) 555-0148</a></p>
+    <span class="demo-pill">Demo site · fictional firm</span>
+  </div>
+</aside>
+<div class="main">
+<main id="main">
+<section class="masthead" aria-labelledby="page-title">
+  <nav class="crumbs mono" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Insights</span></nav>
+  <div class="masthead-grid"><h1 id="page-title">Insights &amp; <em>resources.</em></h1><div><p class="lede">Practical essays from the practice. General commentary for demonstration, not professional advice.</p></div></div>
+</section>
+
+<section class="section" aria-labelledby="ins-h">
+  <h2 id="ins-h" class="visually-hidden">Articles</h2>
+  <button type="button" class="feature-article reveal" id="feature-article"></button>
+  <div class="toolbar">
+    <div class="filter-chips" id="filter-chips" role="group" aria-label="Filter by category"></div>
+    <div class="search-box"><label for="insight-search" class="visually-hidden">Search articles</label>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6"/></svg>
+      <input type="search" id="insight-search" placeholder="Search articles" autocomplete="off"></div>
+  </div>
+  <p class="mono muted" id="result-count" aria-live="polite"></p>
+  <div class="articles" id="insights-list"></div>
+</section>
+<section class="section sage" aria-labelledby="res-h">
+  <div class="chapter"><b>—</b> Resources</div>
+  <div class="split">
+    <h2 id="res-h">Tools we <em>hand over.</em></h2>
+    <div>
+      <p>On a real site these would be downloadable templates. In this demonstration they show how gated resources can feed a lead pipeline.</p>
+      <ul class="quick-list">
+        <li><a href="onboarding.html?resource=cash-forecast"><span>13-week cash forecast template</span><span>Spreadsheet</span></a></li>
+        <li><a href="onboarding.html?resource=one-page-strategy"><span>One-page strategy canvas</span><span>PDF</span></a></li>
+        <li><a href="onboarding.html?resource=pipeline"><span>Pipeline stage definitions</span><span>Checklist</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section white" aria-labelledby="news-h">
+  <div class="newsletter">
+    <div><div class="chapter"><b>—</b> Newsletter</div><h2 id="news-h">One useful note a month.</h2><p class="muted mb-0">Demo form: no email is collected or sent.</p></div>
+    <form class="inline-form" data-demo-form="newsletter" novalidate>
+      <div class="field"><label for="n-email">Work email<span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="n-email" name="email" required autocomplete="email" data-label="Email" aria-describedby="n-email-error"><span class="error-msg" id="n-email-error"></span></div>
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+<dialog class="sheet" id="article-dialog" aria-labelledby="article-dialog-title">
+  <div class="sheet-inner"><button class="icon-btn sheet-close" type="button" data-close aria-label="Close article">✕</button><div class="sheet-body"></div></div>
+</dialog>
+</main>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <img src="images/logo.png" alt="" width="48" height="48">
+      <h2 class="gap-top">Considered advice for the decisions that shape a firm.</h2>
+      <a class="btn btn-primary btn-sm" href="appointments.html?type=intro">Book a consultation</a>
+    </div>
+    <div><h3>Practice areas</h3><ul><li><a href="service-details.html?service=business-consulting">Business Consulting</a></li><li><a href="service-details.html?service=strategic-planning">Strategic Planning</a></li><li><a href="service-details.html?service=financial-consulting">Financial Consulting</a></li><li><a href="service-details.html?service=marketing-strategy">Marketing Strategy</a></li><li><a href="service-details.html?service=operations-consulting">Operations Consulting</a></li><li><a href="service-details.html?service=business-development">Business Development</a></li><li><a href="service-details.html?service=custom-solutions">Customized Professional Solutions</a></li></ul></div>
+    <div><h3>Firm</h3><ul>
+      <li><a href="about.html">About the firm</a></li><li><a href="team.html">Our people</a></li>
+      <li><a href="insights.html">Insights</a></li><li><a href="about.html#faq">FAQ</a></li>
+      <li><a href="onboarding.html">New client inquiry</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact (fictional)</h3><ul>
+      <li><a href="mailto:hello@aldermoor-advisory.example">hello@aldermoor-advisory.example</a></li>
+      <li><a href="tel:+13125550148">(312) 555-0148</a></li>
+      <li>Chicago Loop, Illinois</li><li>Mon–Fri · 8:30–17:30 CT</li></ul></div>
+  </div>
+  <div class="va-credit">
+    <p><strong>Designed and developed by Virellion Apex.</strong> Want a website like this for your firm?</p>
+    <div class="btn-row"><a class="btn btn-primary btn-sm" href="https://virellionapex.com" rel="noopener">Request a similar website</a><a class="btn btn-outline btn-sm" href="https://virellionapex.com" rel="noopener">Contact Virellion Apex</a></div>
+  </div>
+  <div class="disclaimer">
+    <p class="statement">This website is a demonstration project developed by Virellion Apex. The consulting firm, team members, testimonials, and business information are fictional.</p>
+    <p>All appointment requests, onboarding submissions and contact forms run in demonstration mode: nothing is sent or stored on a server. No professional, financial or legal advice is provided by this site. Contact details use reserved example domains and 555 phone numbers. Fees shown are illustrative.</p>
+    <p>Photography from <a href="https://unsplash.com/?utm_source=aldermoor_demo&amp;utm_medium=referral" rel="noopener">Unsplash</a> by Adrian Sulyok, Alvaro Reyes, Annie Spratt, Austin Distel, Campaign Creators, Daria Nepriakhina, Dylan Gillis, FORTYTWO, Gary Ellis, Headway, Isaac Smith, Jo Szczepanska, Markus Spiske, Patrick Robert Doyle, Piotr Wilk, Towfiqu barbhuiya, Viktor Avdeev. Team portraits are original illustrated placeholders.</p>
+    <p>© <span data-year>2026</span> Virellion Apex · Demonstration build</p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

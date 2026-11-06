@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob: https://images.unsplash.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-src https://www.openstreetmap.org; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>New Client Inquiry — Aldermoor Advisory (Demo)</title>
+<meta name="description" content="Start a new client inquiry with the fictional Aldermoor Advisory: business details, service interests, objectives, budget range and consultation preferences.">
+<link rel="canonical" href="https://consulting.virellionapex.com/onboarding.html">
+<meta name="theme-color" content="#1d3a32">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aldermoor Advisory (Demo by Virellion Apex)">
+<meta property="og:title" content="New Client Inquiry — Aldermoor Advisory (Demo)">
+<meta property="og:description" content="Start a new client inquiry with the fictional Aldermoor Advisory: business details, service interests, objectives, budget range and consultation preferences.">
+<meta property="og:url" content="https://consulting.virellionapex.com/onboarding.html">
+<meta property="og:image" content="https://consulting.virellionapex.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aldermoor Advisory — fictional consulting firm demonstration website by Virellion Apex">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="New Client Inquiry — Aldermoor Advisory (Demo)">
+<meta name="twitter:description" content="Start a new client inquiry with the fictional Aldermoor Advisory: business details, service interests, objectives, budget range and consultation preferences.">
+<meta name="twitter:image" content="https://consulting.virellionapex.com/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Aldermoor Advisory home"><img src="images/logo.png" alt="" width="42" height="42"><span class="brand-name">Aldermoor<small>Advisory</small></span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-rail"><span class="bars" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+</header>
+<aside class="rail" id="site-rail" aria-label="Site">
+  <a class="brand" href="index.html" aria-label="Aldermoor Advisory home"><img src="images/logo.png" alt="" width="42" height="42"><span class="brand-name">Aldermoor<small>Advisory</small></span></a>
+  <nav class="rail-nav" aria-label="Main"><ol><li><a href="index.html">Home</a></li><li><a href="about.html">The Firm</a></li><li><a href="services.html">Practice Areas</a></li><li><a href="team.html">People</a></li><li><a href="insights.html">Insights</a></li><li><a href="appointments.html">Book a Consultation</a></li><li><a href="onboarding.html" aria-current="page">New Client Inquiry</a></li><li><a href="contact.html">Contact</a></li></ol></nav>
+  <div class="rail-foot">
+    <a class="btn btn-primary btn-sm" href="appointments.html?type=intro">Free 30-min call</a>
+    <p class="rail-meta">Chicago · Remote across North America<br><a href="tel:+13125550148">(312) 555-0148</a></p>
+    <span class="demo-pill">Demo site · fictional firm</span>
+  </div>
+</aside>
+<div class="main">
+<main id="main">
+<section class="masthead" aria-labelledby="page-title">
+  <nav class="crumbs mono" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">New Client Inquiry</span></nav>
+  <div class="masthead-grid"><h1 id="page-title">New client <em>inquiry.</em></h1><div><p class="lede">A structured brief helps us prepare a useful first conversation. Five short steps; your draft is saved on this device as you go.</p></div></div>
+</section>
+
+<section class="section" aria-labelledby="onb-h">
+  <h2 id="onb-h" class="visually-hidden">Client onboarding form</h2>
+  <div class="demo-note" id="draft-note" hidden><span aria-hidden="true">↺</span><p class="mb-0"><strong>Draft restored</strong> from <span id="draft-time"></span>. <button type="button" class="edit-link" id="clear-draft">Clear draft and start over</button></p></div>
+  <div id="onboarding" class="form-shell gap-top">
+    <div class="form-head"><ol class="stepper" aria-label="Inquiry progress"><li>Business</li><li>Services</li><li>Objectives</li><li>Budget & method</li><li>Review</li></ol></div>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <form id="onboarding-form" novalidate>
+      <div class="form-body">
+        <p class="mono muted step-status" aria-live="polite"></p>
+        <div class="step-panel">
+          <h2>About you and your business</h2>
+          <div class="form-grid">
+            <div class="field"><label for="o-name">Full name<span class="req" aria-hidden="true">*</span></label><input type="text" id="o-name" name="fullname" required autocomplete="name" data-label="Full name" aria-describedby="o-name-error" minlength="2"><span class="error-msg" id="o-name-error"></span></div>
+            <div class="field"><label for="o-title">Job title<span class="req" aria-hidden="true">*</span></label><input type="text" id="o-title" name="title" required autocomplete="organization-title" data-label="Job title" aria-describedby="o-title-error"><span class="error-msg" id="o-title-error"></span></div>
+            <div class="field"><label for="o-email">Work email<span class="req" aria-hidden="true">*</span></label><input type="email" id="o-email" name="email" required autocomplete="email" data-label="Work email" aria-describedby="o-email-error"><span class="error-msg" id="o-email-error"></span></div>
+            <div class="field"><label for="o-phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="o-phone" name="phone" autocomplete="tel" data-label="Phone" aria-describedby="o-phone-error"><span class="error-msg" id="o-phone-error"></span></div>
+            <div class="field"><label for="o-company">Company name<span class="req" aria-hidden="true">*</span></label><input type="text" id="o-company" name="company" required autocomplete="organization" data-label="Company name" aria-describedby="o-company-error"><span class="error-msg" id="o-company-error"></span></div>
+            <div class="field"><label for="o-website">Website <span class="opt">(optional)</span></label><span class="hint" id="o-website-hint">e.g. yourcompany.com</span><input type="url" id="o-website" name="website" autocomplete="url" data-label="Website" aria-describedby="o-website-error o-website-hint"><span class="error-msg" id="o-website-error"></span></div>
+            <div class="field"><label for="o-industry">Industry<span class="req" aria-hidden="true">*</span></label><select id="o-industry" name="industry" required data-label="Industry" aria-describedby="o-industry-error"><option value="">Select…</option><option value="professional-services">Professional services</option><option value="distribution-and-wholesale">Distribution &amp; wholesale</option><option value="construction-and-trades">Construction &amp; trades</option><option value="manufacturing">Manufacturing</option><option value="retail-and-e-commerce">Retail &amp; e-commerce</option><option value="healthcare-services">Healthcare services</option><option value="technology">Technology</option><option value="nonprofit">Nonprofit</option><option value="other">Other</option></select><span class="error-msg" id="o-industry-error"></span></div>
+            <div class="field"><label for="o-size">Company size<span class="req" aria-hidden="true">*</span></label><select id="o-size" name="size" required data-label="Company size" aria-describedby="o-size-error"><option value="">Select…</option><option value="1-14">1–14 employees</option><option value="15-49">15–49</option><option value="50-149">50–149</option><option value="150-500">150–500</option><option value="500+">500+</option></select><span class="error-msg" id="o-size-error"></span></div>
+            <div class="field"><label for="o-years">Years in business<span class="req" aria-hidden="true">*</span></label><select id="o-years" name="years" required data-label="Years in business" aria-describedby="o-years-error"><option value="">Select…</option><option value="0-2">Under 2 years</option><option value="3-5">3–5 years</option><option value="6-15">6–15 years</option><option value="15+">Over 15 years</option></select><span class="error-msg" id="o-years-error"></span></div>
+            <div class="field"><label for="o-location">Headquarters location <span class="opt">(optional)</span></label><span class="hint" id="o-location-hint">City, state or province</span><input type="text" id="o-location" name="location" autocomplete="address-level2" data-label="Headquarters location" aria-describedby="o-location-error o-location-hint"><span class="error-msg" id="o-location-error"></span></div>
+          </div>
+        </div>
+        <div class="step-panel" hidden>
+          <h2>Service interests</h2>
+          <div class="form-grid"><fieldset class="full" aria-describedby="services-error"><legend>Which services interest you?<span class="req" aria-hidden="true">*</span></legend><div class="choices " data-required-group="services" data-msg="Choose at least one service."><div class="choice"><input type="checkbox" id="svc-business-consulting" name="services" value="business-consulting" data-multi><label for="svc-business-consulting"><span class="c-title">Business Consulting</span><span class="c-sub">An outside view of the whole business, and a short list of what to fix first.</span></label></div><div class="choice"><input type="checkbox" id="svc-strategic-planning" name="services" value="strategic-planning" data-multi><label for="svc-strategic-planning"><span class="c-title">Strategic Planning</span><span class="c-sub">A three-year direction your team can say in one breath, and a plan to fund it.</span></label></div><div class="choice"><input type="checkbox" id="svc-financial-consulting" name="services" value="financial-consulting" data-multi><label for="svc-financial-consulting"><span class="c-title">Financial Consulting</span><span class="c-sub">Forecasts, pricing and cash discipline that make the numbers useful to run the business.</span></label></div><div class="choice"><input type="checkbox" id="svc-marketing-strategy" name="services" value="marketing-strategy" data-multi><label for="svc-marketing-strategy"><span class="c-title">Marketing Strategy</span><span class="c-sub">Positioning, channels and a budget that ties marketing spend to pipeline.</span></label></div><div class="choice"><input type="checkbox" id="svc-operations-consulting" name="services" value="operations-consulting" data-multi><label for="svc-operations-consulting"><span class="c-title">Operations Consulting</span><span class="c-sub">Find the bottleneck, simplify the handoffs and make performance visible.</span></label></div><div class="choice"><input type="checkbox" id="svc-business-development" name="services" value="business-development" data-multi><label for="svc-business-development"><span class="c-title">Business Development</span><span class="c-sub">A repeatable way to win new clients, from target list to signed proposal.</span></label></div><div class="choice"><input type="checkbox" id="svc-custom-solutions" name="services" value="custom-solutions" data-multi><label for="svc-custom-solutions"><span class="c-title">Customized Professional Solutions</span><span class="c-sub">When the question doesn&#x27;t fit a box: interim leadership, deals and special projects.</span></label></div></div><span class="error-msg" id="services-error"></span></fieldset>
+            <div class="field full"><label for="o-challenge">What is the main challenge you&#x27;d like help with?<span class="req" aria-hidden="true">*</span></label><span class="hint" id="o-challenge-hint">A few sentences is plenty. Avoid confidential details.</span><textarea id="o-challenge" name="challenge" required data-label="What is the main challenge you&#x27;d like help with?" aria-describedby="o-challenge-error o-challenge-hint" minlength="20"></textarea><span class="error-msg" id="o-challenge-error"></span></div>
+          </div>
+        </div>
+        <div class="step-panel" hidden>
+          <h2>Project objectives</h2>
+          <div class="form-grid">
+            <div class="field full"><label for="o-objectives">What would you like to achieve in the next 12 months?<span class="req" aria-hidden="true">*</span></label>
+              <textarea id="o-objectives" name="objectives" required minlength="20" maxlength="1200" data-label="Objectives" aria-describedby="o-objectives-error o-objectives-count"></textarea>
+              <span class="hint" id="o-objectives-count" aria-live="polite">0 / 1200</span><span class="error-msg" id="o-objectives-error"></span></div>
+            <div class="field full"><label for="o-success">How will you measure success? <span class="opt">(optional)</span></label><span class="hint" id="o-success-hint">e.g. margin up 3 points, lead time halved, plan adopted by the board</span><input type="text" id="o-success" name="success" data-label="How will you measure success?" aria-describedby="o-success-error o-success-hint"><span class="error-msg" id="o-success-error"></span></div>
+            <div class="field"><label for="o-start">Ideal start<span class="req" aria-hidden="true">*</span></label><select id="o-start" name="start" required data-label="Ideal start" aria-describedby="o-start-error"><option value="">Select…</option><option value="asap">As soon as possible</option><option value="1-3">In 1–3 months</option><option value="3-6">In 3–6 months</option><option value="exploring">Just exploring</option></select><span class="error-msg" id="o-start-error"></span></div>
+            <div class="field"></div>
+            <fieldset class="full" aria-describedby="urgency-error"><legend>How urgent is this? <span class="opt">(optional)</span></legend><div class="choices compact"><div class="choice"><input type="radio" id="urgency-low" name="urgency" value="low"><label for="urgency-low"><span class="c-title">Planning ahead</span></label></div><div class="choice"><input type="radio" id="urgency-medium" name="urgency" value="medium"><label for="urgency-medium"><span class="c-title">Important this year</span></label></div><div class="choice"><input type="radio" id="urgency-high" name="urgency" value="high"><label for="urgency-high"><span class="c-title">Pressing now</span></label></div></div><span class="error-msg" id="urgency-error"></span></fieldset>
+          </div>
+        </div>
+        <div class="step-panel" hidden>
+          <h2>Budget and consultation preferences</h2>
+          <div class="form-grid"><fieldset class="full" aria-describedby="budget-error"><legend>Budget range<span class="req" aria-hidden="true">*</span></legend><div class="choices " data-required-group="budget" data-msg="Choose a budget range."><div class="choice"><input type="radio" id="budget-under-15" name="budget" value="under-15"><label for="budget-under-15"><span class="c-title">Under $15,000</span><span class="c-sub">Diagnostic or advisory sessions</span></label></div><div class="choice"><input type="radio" id="budget-15-40" name="budget" value="15-40"><label for="budget-15-40"><span class="c-title">$15,000–$40,000</span><span class="c-sub">Focused project</span></label></div><div class="choice"><input type="radio" id="budget-40-100" name="budget" value="40-100"><label for="budget-40-100"><span class="c-title">$40,000–$100,000</span><span class="c-sub">Full programme</span></label></div><div class="choice"><input type="radio" id="budget-100+" name="budget" value="100+"><label for="budget-100+"><span class="c-title">Over $100,000</span><span class="c-sub">Multi-phase or multi-site</span></label></div><div class="choice"><input type="radio" id="budget-unsure" name="budget" value="unsure"><label for="budget-unsure"><span class="c-title">Not sure yet</span><span class="c-sub">We&#x27;ll help you scope it</span></label></div></div><span class="error-msg" id="budget-error"></span></fieldset><fieldset class="full" aria-describedby="method-error"><legend>Preferred consultation method<span class="req" aria-hidden="true">*</span></legend><div class="choices compact" data-required-group="method" data-msg="Choose a consultation method."><div class="choice"><input type="radio" id="method-video" name="method" value="video"><label for="method-video"><span class="c-title">Video call</span></label></div><div class="choice"><input type="radio" id="method-phone" name="method" value="phone"><label for="method-phone"><span class="c-title">Phone call</span></label></div><div class="choice"><input type="radio" id="method-in-person" name="method" value="in-person"><label for="method-in-person"><span class="c-title">In person</span></label></div><div class="choice"><input type="radio" id="method-email" name="method" value="email"><label for="method-email"><span class="c-title">Email first</span></label></div></div><span class="error-msg" id="method-error"></span></fieldset>
+            <div class="field full"><label for="o-decision">Who else is involved in the decision? <span class="opt">(optional)</span></label><span class="hint" id="o-decision-hint">e.g. co-owner, CFO, board</span><input type="text" id="o-decision" name="decision" data-label="Who else is involved in the decision?" aria-describedby="o-decision-error o-decision-hint"><span class="error-msg" id="o-decision-error"></span></div>
+            <div class="field full"><label for="o-source">How did you hear about us? <span class="opt">(optional)</span></label><select id="o-source" name="source" data-label="How did you hear about us?" aria-describedby="o-source-error"><option value="">Select…</option><option value="referral">Referral from a colleague</option><option value="search">Search engine</option><option value="linkedin">LinkedIn</option><option value="event">Event or talk</option><option value="article">An article or newsletter</option><option value="other">Other</option></select><span class="error-msg" id="o-source-error"></span></div>
+          </div>
+        </div>
+        <div class="step-panel" hidden>
+          <h2>Review your inquiry</h2>
+          <dl class="review" id="onboarding-review"></dl>
+          <div class="gap-top-lg stack">
+            <div class="demo-note"><span aria-hidden="true">ⓘ</span><p class="mb-0"><strong>Demonstration mode.</strong> Submitting will not send your inquiry anywhere. Your saved draft is deleted from this device on submit.</p></div>
+            <label class="check-line"><input type="checkbox" id="o-consent" name="consent" required data-msg="Please confirm before submitting." aria-describedby="o-consent-error"> I understand this is a demonstration and that no information is transmitted.</label>
+            <span class="error-msg" id="o-consent-error"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-foot">
+        <span class="hint" id="autosave" aria-live="polite">Your answers save on this device as you type.</span>
+        <div class="btn-row"><button type="button" class="btn btn-outline no-arrow btn-sm" data-back>← Back</button><button type="button" class="btn btn-dark" data-next>Continue</button><button type="submit" class="btn btn-primary" data-submit>Submit inquiry</button></div>
+      </div>
+    </form>
+  </div>
+
+  <div id="onboarding-confirmation" class="form-shell confirmation" hidden aria-live="polite">
+    <div class="form-body">
+      <div class="seal" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></div>
+      <p class="mono eyebrow">Demonstration confirmation</p>
+      <h2>Thank you, <span id="o-conf-name"></span>.</h2>
+      <p class="lede">On a live site, a partner would review the inquiry for <strong id="o-conf-company"></strong> and reply by <span id="o-conf-method"></span> within one business day.</p>
+      <span class="ref" id="o-conf-ref"></span>
+      <p><strong>Nothing was sent.</strong> This form runs in demonstration mode and your draft has been removed from this device.</p>
+      <div class="btn-row gap-top"><a class="btn btn-primary" href="appointments.html?type=intro">Book an introductory call</a><button type="button" class="btn btn-outline no-arrow" id="onboard-again">Start a new inquiry</button></div>
+    </div>
+  </div>
+</section>
+<section class="section sage" aria-labelledby="next-h">
+  <div class="chapter"><b>—</b> What happens next</div>
+  <h2 id="next-h" class="visually-hidden">What happens next</h2>
+  <ol class="process">
+    <li><div><h3>We read your brief <span class="dur">· Within 1 business day</span></h3><p>A partner reviews the inquiry and any materials you share.</p></div></li>
+    <li><div><h3>Introductory conversation <span class="dur">· 30 minutes</span></h3><p>We ask questions, share initial thoughts and say plainly whether we are the right fit.</p></div></li>
+    <li><div><h3>Written proposal <span class="dur">· Within 1 week</span></h3><p>Scope, team, timeline and a fixed fee, ready for your review.</p></div></li>
+  </ol>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <img src="images/logo.png" alt="" width="48" height="48">
+      <h2 class="gap-top">Considered advice for the decisions that shape a firm.</h2>
+      <a class="btn btn-primary btn-sm" href="appointments.html?type=intro">Book a consultation</a>
+    </div>
+    <div><h3>Practice areas</h3><ul><li><a href="service-details.html?service=business-consulting">Business Consulting</a></li><li><a href="service-details.html?service=strategic-planning">Strategic Planning</a></li><li><a href="service-details.html?service=financial-consulting">Financial Consulting</a></li><li><a href="service-details.html?service=marketing-strategy">Marketing Strategy</a></li><li><a href="service-details.html?service=operations-consulting">Operations Consulting</a></li><li><a href="service-details.html?service=business-development">Business Development</a></li><li><a href="service-details.html?service=custom-solutions">Customized Professional Solutions</a></li></ul></div>
+    <div><h3>Firm</h3><ul>
+      <li><a href="about.html">About the firm</a></li><li><a href="team.html">Our people</a></li>
+      <li><a href="insights.html">Insights</a></li><li><a href="about.html#faq">FAQ</a></li>
+      <li><a href="onboarding.html">New client inquiry</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact (fictional)</h3><ul>
+      <li><a href="mailto:hello@aldermoor-advisory.example">hello@aldermoor-advisory.example</a></li>
+      <li><a href="tel:+13125550148">(312) 555-0148</a></li>
+      <li>Chicago Loop, Illinois</li><li>Mon–Fri · 8:30–17:30 CT</li></ul></div>
+  </div>
+  <div class="va-credit">
+    <p><strong>Designed and developed by Virellion Apex.</strong> Want a website like this for your firm?</p>
+    <div class="btn-row"><a class="btn btn-primary btn-sm" href="https://virellionapex.com" rel="noopener">Request a similar website</a><a class="btn btn-outline btn-sm" href="https://virellionapex.com" rel="noopener">Contact Virellion Apex</a></div>
+  </div>
+  <div class="disclaimer">
+    <p class="statement">This website is a demonstration project developed by Virellion Apex. The consulting firm, team members, testimonials, and business information are fictional.</p>
+    <p>All appointment requests, onboarding submissions and contact forms run in demonstration mode: nothing is sent or stored on a server. No professional, financial or legal advice is provided by this site. Contact details use reserved example domains and 555 phone numbers. Fees shown are illustrative.</p>
+    <p>Photography from <a href="https://unsplash.com/?utm_source=aldermoor_demo&amp;utm_medium=referral" rel="noopener">Unsplash</a> by Adrian Sulyok, Alvaro Reyes, Annie Spratt, Austin Distel, Campaign Creators, Daria Nepriakhina, Dylan Gillis, FORTYTWO, Gary Ellis, Headway, Isaac Smith, Jo Szczepanska, Markus Spiske, Patrick Robert Doyle, Piotr Wilk, Towfiqu barbhuiya, Viktor Avdeev. Team portraits are original illustrated placeholders.</p>
+    <p>© <span data-year>2026</span> Virellion Apex · Demonstration build</p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
