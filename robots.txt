@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://consulting.virellionapex.com/sitemap.xml
+Sitemap: https://lilmoniisenterprise.github.io/consulting-demo/sitemap.xml
