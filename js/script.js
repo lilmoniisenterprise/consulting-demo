@@ -92,7 +92,7 @@ var APPT_TYPES = [{"id": "intro", "name": "Introductory call", "length": "30 min
     $$(".index-row[data-img]").forEach(function (row) {
       row.addEventListener("mouseenter", function () { preview.style.backgroundImage = "url('" + photo(row.getAttribute("data-img"), 600) + "')"; preview.classList.add("show"); });
       row.addEventListener("mouseleave", function () { preview.classList.remove("show"); });
-      row.addEventListener("mousemove", function (e) { preview.style.left = (e.clientX + 170) + "px"; preview.style.top = e.clientY + "px"; });
+      row.addEventListener("mousemove", function (e) { var r = row.getBoundingClientRect(); preview.style.left = (e.clientX + 24) + "px"; preview.style.top = (r.top - 12) + "px"; });
     });
   }
 
@@ -213,6 +213,10 @@ var APPT_TYPES = [{"id": "intro", "name": "Introductory call", "length": "30 min
     var idx = SERVICES.indexOf(svc);
     doc.title = svc.name + " — Aldermoor Advisory (Demo)";
     var md = $("meta[name='description']"); if (md) md.setAttribute("content", svc.summary);
+    var svcUrl = "https://lilmoniisenterprise.github.io/consulting-demo/service-details.html?service=" + svc.slug;
+    var cn = $("link[rel='canonical']"); if (cn) cn.setAttribute("href", svcUrl);
+    var ou = $("meta[property='og:url']"); if (ou) ou.setAttribute("content", svcUrl);
+    var ot = $("meta[property='og:title']"); if (ot) ot.setAttribute("content", doc.title);
     var crumb = $("#crumb-current"); if (crumb) crumb.textContent = svc.name;
     var navHtml = SERVICES.map(function (s, k) {
       return '<li><a href="service-details.html?service=' + s.slug + '"' + (s === svc ? ' aria-current="true"' : "") + '><span>' + String(k + 1).padStart(2, "0") + "</span>" + esc(s.name) + "</a></li>";
@@ -398,6 +402,10 @@ var APPT_TYPES = [{"id": "intro", "name": "Introductory call", "length": "30 min
       m.classList.toggle("done", k < n); m.classList.toggle("current", k === n);
       if (k === n) m.setAttribute("aria-current", "step"); else m.removeAttribute("aria-current");
     });
+    var last = n === this.panels.length - 1;
+    $$("[data-back]", this.root).forEach(function (b) { b.hidden = n === 0; });
+    $$("[data-next]", this.root).forEach(function (b) { b.hidden = last; });
+    $$("[data-submit]", this.root).forEach(function (b) { b.hidden = !last; });
     if (this.bar) this.bar.style.width = ((n + 1) / this.panels.length * 100) + "%";
     var stat = $(".step-status", this.root); if (stat) stat.textContent = "Step " + (n + 1) + " of " + this.panels.length;
     if (this.opts.onShow) this.opts.onShow(n);
@@ -540,6 +548,7 @@ var APPT_TYPES = [{"id": "intro", "name": "Introductory call", "length": "30 min
 
     bForm.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (bStepper.i < bStepper.panels.length - 1) { bStepper.next(); return; }
       var last = bStepper.panels[bStepper.panels.length - 1];
       if (!validateScope(last)) return;
       var t = selectedType(), ref = demoRef("ALD");
@@ -642,6 +651,7 @@ var APPT_TYPES = [{"id": "intro", "name": "Introductory call", "length": "30 min
 
     oForm.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (oStepper.i < oStepper.panels.length - 1) { oStepper.next(); return; }
       if (!validateScope(oStepper.panels[4])) return;
       var d = formData(oForm), ref = demoRef("ONB");
       $("#o-conf-ref").textContent = ref;
